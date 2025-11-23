@@ -1,27 +1,22 @@
-import { charities, findImage } from '../lib/data';
-import WishCard from '../components/wish-card';
+
+import { charities, findImage, type Charity } from '../../lib/data';
+import WishCard from '../../components/wish-card';
 import { Link as LinkIcon, Leaf } from 'lucide-react';
-import { Button } from '../components/ui/button';
+import { Button } from '../../components/ui/button';
 import { useParams, Navigate } from 'react-router-dom';
 
 export default function CharityPage() {
   const { slug } = useParams<{ slug: string }>();
   const charity = charities.find((c) => c.slug === slug);
-
-  if (!charity) {
-    // In react-router, you might redirect to a 404 page
-    return <Navigate to="/404" />;
-  }
-
+  if (!charity) return <Navigate to="/" replace />;
   const bannerImage = findImage(charity.bannerId);
-
   return (
     <div className="bg-background pt-24">
-      <header className="relative h-64 md:h-80 w-full">
+      <header className="relative h-64 md:h-80 w-full overflow-hidden p-0 m-0">
         <img
           src={bannerImage.imageUrl}
           alt={bannerImage.description}
-          className="object-cover w-full h-full"
+          className="absolute inset-0 w-full h-full object-cover"
           data-ai-hint={bannerImage.imageHint}
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
