@@ -59,16 +59,26 @@ body {
 
 @layer base {
   * {
-    @apply border-border;
+    /* @apply border-border; */
+    border-color: hsl(var(--border));
   }
   body {
-    @apply bg-background text-foreground;
+    /* @apply bg-background text-foreground; */
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
   .swiper-pagination {
-    @apply absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2;
+    /* @apply absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2; */
+    position: absolute;
+    bottom: 1rem; /* tailwind bottom-4 */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 0.5rem; /* tailwind gap-2 */
   }
   .swiper-pagination-bullet {
-    @apply w-2 h-2 rounded-full cursor-pointer transition-colors;
+    /* @apply w-2 h-2 rounded-full cursor-pointer transition-colors; */
     background-color: hsla(var(--primary-foreground), 0.5);
   }
   .swiper-pagination-bullet-active {
