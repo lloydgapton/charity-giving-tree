@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Landing from './pages/Landing';
-import Charity from './pages/Charity';
+import CharityDetailPage from '../src/charity/[slug]/page';
 import React from 'react';
 import Header from './components/header';
 export default function App() {
@@ -17,7 +17,7 @@ export default function App() {
                     <Header variant="light" />
                     <Routes>
                         <Route path="/" element={<Landing />} />
-                        <Route path="/charity/:slug" element={<Charity />} />
+                        <Route path="/charity/:slug" element={<CharityDetailPage />} />
                     </Routes>
                 </>
             )}
