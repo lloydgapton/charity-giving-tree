@@ -8,10 +8,14 @@ function App() {
         <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/charity/:slug" element={<CharityPage />} />
-
-        </Routes>
+      </Routes>
     
-        <Link to="#/charity/evergreen-foundation">Visit Charity</Link>
+        <Link to="/charity/evergreen-foundation"></Link>
+        <Link to="#/charity/evergreen-foundation"></Link>
+        <Link to="#/charity/evergreen-foundation"></Link>
+        <Link to="#/charity/evergreen-foundation"></Link>
+        <Link to="#/charity/evergreen-foundation"></Link>
+
 
     </>
   );
