@@ -1,4 +1,4 @@
-import { charities, findImage, type Charity } from '../../lib/data';
+import { charities, findImage } from '../../lib/data';
 import WishCard from '../../components/wish-card';
 import { Link as LinkIcon, Leaf } from 'lucide-react';
 import { Button } from '../../components/ui/button';
