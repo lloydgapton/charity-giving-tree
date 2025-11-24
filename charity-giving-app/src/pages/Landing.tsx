@@ -1,10 +1,13 @@
 import Header from "../components/header";
+import HeroCarousel from "../components/hero-carousel";
+import DonationStats from "../components/donation-stats";
 
 export default function Landing() {
   return(
     <section>
-        <Header variant="light" />
-        <h1>Landing.tsx file</h1>
+        <Header variant="dark" />
+         <HeroCarousel />
+          <DonationStats />
     </section>
 
   )

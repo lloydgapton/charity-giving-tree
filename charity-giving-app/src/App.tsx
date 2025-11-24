@@ -1,30 +1,15 @@
 import { Routes, Route } from 'react-router-dom';
-import Landing from './pages/Landing';
-import CharityDetailPage from '../src/charity/[slug]/page';
-import React from 'react';
-import Header from './components/header';
-import HeroCarousel from './components/hero-carousel';
-import DonationStats from './components/donation-stats';
-export default function App() {
-    const [isClient, setIsClient] = React.useState(false);
+import HomePage from './pages/Landing';
+import CharityPage from './pages/Charity/[slug]/Charity';
 
-    React.useEffect(() => {
-        setIsClient(true);
-    }, []);
-
-    return (
-        <>
-            {isClient && (
-                <>
-                    <Header variant="light" />
-                    <HeroCarousel />
-                    <DonationStats />
-                    <Routes>
-                        <Route path="/" element={<Landing />} />
-                        <Route path="/charity/:slug" element={<CharityDetailPage />} />
-                    </Routes>
-                </>
-            )}
-        </>
-    );
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/charity/:slug" element={<CharityPage />} />
+    </Routes>
+  );
 }
+
+export default App;
+

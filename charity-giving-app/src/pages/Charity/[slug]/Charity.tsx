@@ -1,8 +1,9 @@
-import { charities, findImage } from '../../lib/data';
-import WishCard from '../../components/wish-card';
+import { charities, findImage } from '../../../lib/data';
+import WishCard from '../../../components/wish-card';
 import { Link as LinkIcon, Leaf } from 'lucide-react';
-import { Button } from '../../components/ui/button';
+import { Button } from '../../../components/ui/button';
 import { useParams, Navigate } from 'react-router-dom';
+import Header from '../../../components/header';
 
 export default function CharityPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -10,7 +11,8 @@ export default function CharityPage() {
   if (!charity) return <Navigate to="/" replace />;
   const bannerImage = findImage(charity.bannerId);
   return (
-    <div className="bg-background pt-24">
+    <div className="bg-background pt-12">
+      <Header variant="light" />,
       <header className="relative h-64 md:h-80 w-full overflow-hidden p-0 m-0">
         <img
           src={bannerImage.imageUrl}
