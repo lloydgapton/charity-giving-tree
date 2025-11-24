@@ -10,11 +10,11 @@ function App() {
       <Route path="/charity/:slug" element={<CharityPage />} />
       </Routes>
     
-        <Link to="/charity/evergreen-foundation"></Link>
-        <Link to="#/charity/giving-grove"></Link>
+        <Link to="#/charity/hope-sprouts"></Link>
+        <Link to="#/charity/the-giving-grove"></Link>
         <Link to="#/charity/evergreen-foundation"></Link>
-        <Link to="#/charity/evergreen-foundation"></Link>
-        <Link to="#/charity/evergreen-foundation"></Link>
+        <Link to="#/charity/golden-roots-initiative"></Link>
+        <Link to="#/charity/community-canopy"></Link>
 
 
     </>
