@@ -2,6 +2,7 @@ import { findImage, type ImageWithText } from '../lib/data';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination, EffectFade } from 'swiper/modules';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import 'swiper/swiper-bundle.css';
 
 const heroImageIds: ImageWithText[] = [
   { id: 'hero-1', text: 'Your contribution can fill a plate and warm a heart.' },
@@ -31,7 +32,7 @@ export default function HeroCarousel() {
         }}
         className="w-full"
       >
-        {heroImageIds.map((imageData, index) => {
+        {heroImageIds.map((imageData) => {
           const image = findImage(imageData.id);
           return (
             <SwiperSlide key={image.id}>
@@ -39,9 +40,7 @@ export default function HeroCarousel() {
                 <img
                   src={image.imageUrl}
                   alt={image.description}
-                //   fill
-                  className="object-cover"
-                //   priority={index === 0}
+                  className="object-cover w-full h-full absolute inset-0"
                   data-ai-hint={image.imageHint}
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-8">
