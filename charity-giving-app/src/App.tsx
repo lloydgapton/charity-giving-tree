@@ -11,7 +11,7 @@ function App() {
       </Routes>
     
         <Link to="/charity/evergreen-foundation"></Link>
-        <Link to="#/charity/giving-grove"></Link>
+        <Link to="/charity/giving-grove"></Link>
         <Link to="#/charity/evergreen-foundation"></Link>
         <Link to="#/charity/evergreen-foundation"></Link>
         <Link to="#/charity/evergreen-foundation"></Link>
