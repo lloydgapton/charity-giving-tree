@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Progress } from './ui/progress';
 import { Button } from './ui/button';
-// import DonationDialog from './donation-dialog';
+import DonationDialog from './donation-dialog';
 import { Badge } from './ui/badge';
 import { Target, Leaf } from 'lucide-react';
 
@@ -51,12 +51,12 @@ export default function WishCard({ wish, charity }: WishCardProps) {
           <Button onClick={() => setIsDialogOpen(true)} className="bg-accent hover:bg-accent/90 text-accent-foreground">Donate</Button>
         </CardFooter>
       </Card>
-      {/* <DonationDialog
+      <DonationDialog
         isOpen={isDialogOpen}
         setIsOpen={setIsDialogOpen}
         wish={wish}
         charity={charity}
-      /> */}
+      />
     </>
   );
 }
