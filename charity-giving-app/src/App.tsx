@@ -15,9 +15,7 @@ function App() {
         <Link to="#/charity/evergreen-foundation"></Link>
         <Link to="#/charity/golden-roots-initiative"></Link>
         <Link to="#/charity/community-canopy"></Link>
-
-
-    </>
+   </>
   );
 
 }

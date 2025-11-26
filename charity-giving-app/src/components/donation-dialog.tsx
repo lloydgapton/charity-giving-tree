@@ -64,39 +64,6 @@ export default function DonationDialog({ isOpen, setIsOpen, wish, charity }: Don
   async function onSubmit(data: DonationFormValues) {
     const totalDonation = data.quantity * wish.unitPrice;
     setDonationAmount(totalDonation);
-
-    // // --- Start of Make.com Integration ---
-    // const webhookUrl = process.env.NEXT_PUBLIC_MAKE_COM_WEBHOOK_URL;
-
-    // if (webhookUrl && webhookUrl.includes('your-unique-webhook-id')) {
-    //     console.warn('Make.com webhook URL is a placeholder. Please update it in .env.local.');
-    // }
-    
-    // if (webhookUrl && !webhookUrl.includes('your-unique-webhook-id')) {
-    //     try {
-    //         await fetch(webhookUrl, {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify({
-    //                 toEmail: data.email,
-    //                 donorName: data.name || 'A generous donor',
-    //                 charityName: charity.name,
-    //                 wishTitle: wish.title,
-    //                 donationAmount: totalDonation,
-    //             }),
-    //         });
-    //     } catch (error) {
-    //         console.error('Failed to trigger Make.com webhook:', error);
-    //         // We can decide if we want to show an error to the user or just log it.
-    //         // For now, we'll let the donation proceed.
-    //     }
-    // }
-    // --- End of Make.com Integration ---
-
-
-    // In a real app, you would also save the donation to a database here.
     console.log('Donation processed:', data);
     
     setStep('success');
