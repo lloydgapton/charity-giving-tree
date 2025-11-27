@@ -21,7 +21,8 @@ const data: { placeholderImages: ImagePlaceholder[] } = {
     },
     {
       id: "hero-3",
-      description: "A child learning in a classroom with a raised hand.",
+      description:
+        "When you give, someone eats, someone smiles, someone believes again.",
       imageUrl: "/give.jpg",
       imageHint: "education child",
     },
