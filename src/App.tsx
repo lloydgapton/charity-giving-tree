@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import HomePage from './pages/Landing';
-import CharityPage from './pages/Charity/[slug]/Charity';
+import CharityPage from './pages/Charity';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
