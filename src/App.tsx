@@ -1,8 +1,14 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import HomePage from './pages/Landing';
 import CharityPage from './pages/Charity/[slug]/Charity';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function App() {
+  const {pathname} = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <>
         <Routes>
