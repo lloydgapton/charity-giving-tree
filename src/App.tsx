@@ -3,6 +3,7 @@ import HomePage from './pages/Landing';
 import CharityPage from './pages/Charity';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import Tree from './pages/Tree';
 
 function App() {
   const {pathname} = useLocation();
@@ -14,6 +15,7 @@ function App() {
         <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/charity/:slug" element={<CharityPage />} />
+      <Route path="/tree" element={<Tree />} />
       </Routes>
     
         <Link to="#/charity/hope-sprouts"></Link>
