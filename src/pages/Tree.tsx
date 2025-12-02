@@ -13,7 +13,7 @@ type GivingTreeProps = {
 
 const branchPositions = [
   { top: '-30%', left: '10%' },
-  { top: '-10%', left: '-25%' },
+  { top: '-10%', left: '-10px' },
   { top: '0%', left: '10%' },
   { top: '10%', left: '35%' },
   { top: '15%', left: '-25%' },
@@ -27,12 +27,12 @@ export default function Tree({charities}: GivingTreeProps) {
   };
 
   return (<>
-  <section className="relative min-h-[140vh] flex items-center justify-center overflow-hidden">
+  <section className=" md:min-h-[120vh] lg:min-h-[140vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 flex items-center justify-center">
           <img
           src= {givingTreeImage}
           alt="The Digital Giving Tree"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background" />
       <Dialog>
@@ -51,7 +51,7 @@ export default function Tree({charities}: GivingTreeProps) {
                             src={findImage(charity.logoId).imageUrl}
                             alt={`${charity.name} logo`}
                 
-                            className="rounded-full border-4 border-background object-cover shadow-lg transition-transform duration-300 group-hover:scale-105 w-full h-full"
+                            className="rounded-full border-4 border-background object-cover shadow-lg transition-transform duration-300 group-hover:scale-105 w-full h-full object-cover object-center"
                             data-ai-hint={findImage(charity.logoId).imageHint}
                         />
                     </button>
