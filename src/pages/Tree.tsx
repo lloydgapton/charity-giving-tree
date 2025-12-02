@@ -43,16 +43,15 @@ export default function Tree({charities}: GivingTreeProps) {
                     asChild
                     key={charity.id}
                     style={{ top: position.top, left: position.left }}
-                    className="absolute w-12 h-12 md:w-16 md:h-16 md:w-16 md:h-16 -translate-x-1/2 -translate-y-1/2"
+                    className="absolute w-16 h-16 md:w-16 md:h-16 -translate-x-1/2 -translate-y-1/2"
                     onClick={() => handleBranchClick(charity)}
                 >
-                    <button aria-label={`Learn more about ${charity.name}`} className="group relative w-full h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-full transition-transform duration-300 transform hover:scale-110">
+                    <button aria-label={`Learn more about ${charity.name}`} className=" relative focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-full transition-transform duration-300 transform hover:scale-110">
                         <img
                             src={findImage(charity.logoId).imageUrl}
                             alt={`${charity.name} logo`}
-                            width={64}
-                            height={64}
-                            className="rounded-full border-4 border-background object-cover shadow-lg transition-transform duration-300 group-hover:scale-105 w-full h-full md:w-16 md:h-16"
+                
+                            className="rounded-full border-4 border-background object-cover shadow-lg transition-transform duration-300 group-hover:scale-105 w-full h-full"
                             data-ai-hint={findImage(charity.logoId).imageHint}
                         />
                     </button>
