@@ -11,7 +11,7 @@ export default function Header({ variant = 'light' }: HeaderProps) {
         <Link to="/" className="flex items-center gap-2 drop-shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:opacity-90">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" 
               className={cn(
-                'h-7 w-7 md:h-8 md:w-8',
+                'h-5 w-5 md:h-5 md:w-5',
                 variant === 'dark' ? 'text-primary-foreground' : 'text-primary'
               )}
             >
@@ -20,7 +20,7 @@ export default function Header({ variant = 'light' }: HeaderProps) {
               <path d="M12 14c-2.76 0-5 2.24-5 5h10c0-2.76-2.24-5-5-5Z"/>
             </svg>
             <span className={cn(
-                'text-2xl md:text-3xl font-headline font-bold',
+                'text-xl md:text-xl font-headline font-bold',
                 variant === 'dark' ? 'text-primary-foreground' : 'text-primary'
               )}
             >

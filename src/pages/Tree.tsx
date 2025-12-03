@@ -1,4 +1,5 @@
-import givingTreeImage from '../assets/tree.jpg';
+import givingTreeImage from '../assets/taller tree.jpg';
+import Header from '../components/header';
 import type { Charity } from '../lib/data';
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
@@ -12,11 +13,11 @@ type GivingTreeProps = {
 };
 
 const branchPositions = [
-  { top: '-30%', left: '10%' },
-  { top: '-10%', left: '-10px' },
-  { top: '0%', left: '10%' },
-  { top: '10%', left: '35%' },
-  { top: '15%', left: '-25%' },
+  { top: '-30%', left: '20%' },
+  { top: '-15%', left: '-40px' },
+  { top: '1%', left: '25%' },
+  { top: '-15%', left: '25%' },
+  { top: '5%', left: '-35%' },
 ];
 
 export default function Tree({charities}: GivingTreeProps) {
@@ -28,11 +29,12 @@ export default function Tree({charities}: GivingTreeProps) {
 
   return (<>
   <section className=" md:min-h-[120vh] lg:min-h-[140vh] flex items-center justify-center overflow-hidden">
+      <Header variant="dark" />
       <div className="absolute inset-0 flex items-center justify-center">
           <img
           src= {givingTreeImage}
           alt="The Digital Giving Tree"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background" />
       <Dialog>
@@ -43,14 +45,15 @@ export default function Tree({charities}: GivingTreeProps) {
                     asChild
                     key={charity.id}
                     style={{ top: position.top, left: position.left }}
-                    className="absolute w-16 h-16 md:w-16 md:h-16 -translate-x-1/2 -translate-y-1/2"
+                    className="absolute w-10 h-10 md:w-16 md:h-16 -translate-x-1/2 -translate-y-1/2"
                     onClick={() => handleBranchClick(charity)}
                 >
                     <button aria-label={`Learn more about ${charity.name}`} className=" relative focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-full transition-transform duration-300 transform hover:scale-110">
                         <img
                             src={findImage(charity.logoId).imageUrl}
                             alt={`${charity.name} logo`}
-                
+                            width={64}
+                            height={64}
                             className="rounded-full border-4 border-background object-cover shadow-lg transition-transform duration-300 group-hover:scale-105 w-full h-full object-cover object-center"
                             data-ai-hint={findImage(charity.logoId).imageHint}
                         />
