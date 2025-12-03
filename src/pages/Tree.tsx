@@ -28,7 +28,7 @@ export default function Tree({charities}: GivingTreeProps) {
   };
 
   return (<>
-  <section className=" md:min-h-[120vh] lg:min-h-[140vh] flex items-center justify-center overflow-hidden">
+  <section className="relative w-full h-screen overflow-hidden">
       <Header variant="dark" />
       <div className="absolute inset-0 flex items-center justify-center">
           <img
