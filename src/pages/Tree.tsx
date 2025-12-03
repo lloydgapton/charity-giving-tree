@@ -1,4 +1,5 @@
 import givingTreeImage from '../assets/taller tree.jpg';
+import Faq from '../components/faq';
 import Header from '../components/header';
 import type { Charity } from '../lib/data';
 import { useState } from 'react';
@@ -92,6 +93,7 @@ export default function Tree({charities}: GivingTreeProps) {
       </Dialog>
       </div>
     </section>
+    <Faq />
   </>
   )
 }
