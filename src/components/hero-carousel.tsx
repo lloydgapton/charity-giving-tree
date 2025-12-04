@@ -41,7 +41,7 @@ export default function HeroCarousel() {
           const image = findImage(imageData.id);
           return (
             <SwiperSlide key={image.id}>
-              <div className="relative w-full aspect-[2/1]">
+              <div className="relative w-full w-screen h-full aspect-[5/5] md:aspect-[2/1]">
                 <img
                   src={image.imageUrl}
                   alt={image.description}
@@ -49,7 +49,7 @@ export default function HeroCarousel() {
                   data-ai-hint={image.imageHint}
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-8">
-                  <h2 className="text-4xl md:text-6xl font-headline font-bold text-white text-center drop-shadow-lg max-w-4xl">
+                  <h2 className="text-2xl md:text-7xl font-headline font-bold text-white text-center drop-shadow-lg max-w-4xl">
                     {imageData.text}
                   </h2>
                 </div>
