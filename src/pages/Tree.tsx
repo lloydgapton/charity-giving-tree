@@ -1,6 +1,5 @@
 import givingTreeImage from '../assets/image6.png';
 import Footer from '../components/footer';
-import Faq from '../components/faq';
 import Header from '../components/header';
 import type { Charity } from '../lib/data';
 import { useState } from 'react';
@@ -103,7 +102,6 @@ export default function Tree({charities}: GivingTreeProps) {
         </div>
       </div>
     </section>
-    <Faq />
     <Footer />
     </div>
   )
