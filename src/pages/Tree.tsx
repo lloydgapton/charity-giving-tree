@@ -94,10 +94,10 @@ export default function Tree({charities}: GivingTreeProps) {
       </Dialog>
       <div className="relative z-10 text-center px-4 pb-20 pt-10">
           <h1 className="text-2xl md:text-7xl font-bold text-background mb-4 drop-shadow-lg">
-            The Digital Giving Tree
+            Choose Where Your Kindness Grows
           </h1>
           <p className="text-s md:text-2xl text-background/90 max-w-xl mx-auto drop-shadow">
-            Connect with local charities and make wishes come true
+            Click on any of the charity logos displayed on our giving tree to view their current wish lists. Every item fulfilled makes a direct, tangible impact on their mission and those they serve.
           </p>
         </div>
       </div>
