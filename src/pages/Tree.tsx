@@ -1,4 +1,5 @@
-import givingTreeImage from '../assets/taller tree.jpg';
+import givingTreeImage from '../assets/image6.png';
+import Footer from '../components/footer';
 import Faq from '../components/faq';
 import Header from '../components/header';
 import type { Charity } from '../lib/data';
@@ -14,11 +15,11 @@ type GivingTreeProps = {
 };
 
 const branchPositions = [
-  { top: '-30%', left: '20%' },
-  { top: '-15%', left: '-40px' },
-  { top: '1%', left: '25%' },
-  { top: '-15%', left: '25%' },
-  { top: '5%', left: '-35%' },
+  { top: '55%', left: '20%' },
+  { top: '60%', left: '25%' },
+  { top: '65%', left: '30%' },
+  { top: '60%', left: '35%' },
+  { top: '55%', left: '40%' },
 ];
 
 export default function Tree({charities}: GivingTreeProps) {
@@ -28,16 +29,17 @@ export default function Tree({charities}: GivingTreeProps) {
     setSelectedCharity(charity);
   };
 
-  return (<>
-  <section className="relative w-full h-screen overflow-hidden">
-      <Header variant="dark" />
-      <div className="absolute inset-0 flex items-center justify-center">
+  return (
+    <div className="w-full">
+      <section className="relative group w-full overflow-visible">
+    <Header variant="dark" />
+    <div className="relative w-screen h-full aspect-[5/5] md:aspect-[2/1]">
           <img
           src= {givingTreeImage}
           alt="The Digital Giving Tree"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/5 to-background/" />
       <Dialog>
         {charities.map((charity, index) => {
             const position = branchPositions[index % branchPositions.length];
@@ -91,9 +93,18 @@ export default function Tree({charities}: GivingTreeProps) {
             </DialogContent>
         )}
       </Dialog>
+      <div className="relative z-10 text-center px-4 pb-20 pt-10">
+          <h1 className="text-2xl md:text-7xl font-bold text-background mb-4 drop-shadow-lg">
+            The Digital Giving Tree
+          </h1>
+          <p className="text-s md:text-2xl text-background/90 max-w-xl mx-auto drop-shadow">
+            Connect with local charities and make wishes come true
+          </p>
+        </div>
       </div>
     </section>
     <Faq />
-  </>
+    <Footer />
+    </div>
   )
 }
