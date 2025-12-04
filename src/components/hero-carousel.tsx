@@ -3,6 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination, EffectFade } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "swiper/swiper-bundle.css";
+import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const heroImageIds: ImageWithText[] = [
   {
@@ -48,10 +51,18 @@ export default function HeroCarousel() {
                   className="object-cover w-full h-full absolute inset-0"
                   data-ai-hint={image.imageHint}
                 />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-8">
+                <div className="absolute inset-0 justify-center p-8 items-center bg-black/40 flex flex-col">
                   <h2 className="text-2xl md:text-7xl font-headline font-bold text-white text-center drop-shadow-lg max-w-4xl">
                     {imageData.text}
                   </h2>
+                  <div className="mt-8">
+                    <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg transform hover:scale-105 transition-transform">
+                      <Link to="/tree">
+                        Give Today
+                        <ArrowRight className="ml-2" />
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
