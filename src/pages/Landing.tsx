@@ -3,6 +3,8 @@ import HeroCarousel from "../components/hero-carousel";
 import DonationStats from "../components/donation-stats";
 import FeaturedWish from "../components/featured-wish";
 import { charities, type Charity, type Wish } from '../lib/data';
+import Faq from "../components/faq";
+import Footer from "../components/footer";
 
 const findFeaturedWish = () => {
   let featuredWish: Wish | null = null;
@@ -32,6 +34,8 @@ export default function Landing() {
           {wish && charity && (
           <FeaturedWish wish={wish} charity={charity} />
         )}
+        <Faq />
+        <Footer />
     </section>
 
   )
