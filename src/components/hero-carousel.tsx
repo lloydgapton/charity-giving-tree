@@ -10,13 +10,13 @@ import { ArrowRight } from "lucide-react";
 const heroImageIds: ImageWithText[] = [
   {
     id: "hero-1",
-    text: "Your contribution can fill a plate and warm a heart.",
+    text: "Fill a Plate, Warm a Heart: Your Gift Makes an Immediate Impact."
   },
   {
     id: "hero-2",
-    text: "Your kindness today becomes hope, food, and education tomorrow.",
+    text: 	"Transforming Kindness into Hope, Food, and Education."
   },
-  { id: "hero-3", text: "Give the gift of a brighter future." },
+  { id: "hero-3", text: 	"Help Us Give the Gift of a Brighter Future Today." },
 ];
 
 export default function HeroCarousel() {
@@ -55,10 +55,10 @@ export default function HeroCarousel() {
                   <h2 className="text-2xl md:text-7xl font-headline font-bold text-white text-center drop-shadow-lg max-w-4xl">
                     {imageData.text}
                   </h2>
-                  <div className="mt-8">
-                    <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg transform hover:scale-105 transition-transform">
+                  <div className="mt-12 sm">
+                    <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg transform hover:scale-105 transition-transform h-10 sm:h-16">
                       <Link to="/tree">
-                        Give Today
+                        <span className="text-s sm:text-xl">Give Today</span>
                         <ArrowRight className="ml-2" />
                       </Link>
                     </Button>
